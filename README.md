@@ -6,7 +6,7 @@ Rollback changes made to the database based on the specific tag
 ```yaml
 steps:
 - uses: actions/checkout@v3
-- uses: liquibase-github-actions/rollback@v4.18.0
+- uses: liquibase-github-actions/rollback@v4.19.0
   with:
     # The root changelog
     # string
@@ -90,7 +90,7 @@ The liquibase rollback action accepts all valid liquibase global options as opti
 ```yaml
 steps:
   - uses: actions/checkout@v3
-  - uses: liquibase-github-actions/rollback@v4.18.0
+  - uses: liquibase-github-actions/rollback@v4.19.0
     with:
       changelogFile: ""
       tag: ""
