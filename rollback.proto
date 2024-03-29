@@ -24,12 +24,15 @@ message RollbackRequest {
   optional string driver_properties_file = 8; // The JDBC driver properties file
   optional string label_filter = 9; // Label expression to use for filtering
   optional string password = 10; // Password to use to connect to the database
-  optional string rollback_script = 11; // Rollback script to execute
-  string tag = 12; // *required* Tag to rollback to
-  optional string tag_version = 13; // Tag version to use for multiple occurrences of a tag
-  string url = 14; // *required* The JDBC database connection URL
-  optional string username = 15; // Username to use to connect to the database
-  liquibase.GlobalOptions global_options = 16;
+  optional bool report_enabled = 11; // [PRO] Enable or disable reporting.
+  optional string report_name = 12; // [PRO] The name of the report.
+  optional string report_path = 13; // [PRO] The path to the directory to generate the report.
+  optional string rollback_script = 14; // Rollback script to execute
+  string tag = 15; // *required* Tag to rollback to
+  optional string tag_version = 16; // Tag version to use for multiple occurrences of a tag
+  string url = 17; // *required* The JDBC database connection URL
+  optional string username = 18; // Username to use to connect to the database
+  liquibase.GlobalOptions global_options = 19;
 }
 
 message Response {
